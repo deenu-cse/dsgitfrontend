@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const components = {
-  'layout/Navbar.tsx': `export default function Navbar() { return <nav className="p-4 flex justify-between bg-zinc-900 border-b border-zinc-800 text-white"><div className="font-bold text-[#1D9E75]">DSA Tracker</div><div><a href="/arena" className="mr-4">Arena</a><button className="bg-[#1D9E75] px-4 py-1 rounded-full text-sm font-bold">Install</button></div></nav>; }`,
+  'layout/Navbar.tsx': `export default function Navbar() { return <nav className="p-4 flex justify-between bg-zinc-900 border-b border-zinc-800 text-white"><div className="font-bold text-[#1D9E75]">DsGit</div><div><a href="/arena" className="mr-4">Arena</a><button className="bg-[#1D9E75] px-4 py-1 rounded-full text-sm font-bold">Install</button></div></nav>; }`,
   'layout/Footer.tsx': `export default function Footer() { return <footer className="p-4 text-center text-zinc-500 border-t border-zinc-800 mt-20">Built for exactly what you asked.</footer>; }`,
   'shared/UserAvatar.tsx': `export default function UserAvatar({ user }: any) { return <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold">{user?.username?.[0] || 'U'}</div>; }`,
   'shared/StreakBadge.tsx': `export default function StreakBadge({ streak }: { streak: number }) { return <span className="bg-orange-500/10 text-orange-400 px-2 py-1 flex items-center gap-1 rounded text-xs font-bold">🔥 {streak}</span>; }`,

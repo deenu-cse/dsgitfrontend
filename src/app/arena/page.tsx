@@ -99,7 +99,7 @@ export default function ArenaPage() {
                 <motion.div 
                   key={i}
                   whileHover={{ scale: 1.05 }}
-                  className={`bg-gradient-to-br ${stat.color} bg-opacity-5 border border-opacity-30 rounded-xl p-6 text-center backdrop-blur-sm`}
+                  className={`bg-[#111] rounded-2xl p-6 border border-zinc-800`}
                 >
                   <div className={`text-4xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.value}
@@ -116,7 +116,7 @@ export default function ArenaPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex gap-2 mb-8 overflow-x-auto pb-4 scrollbar-hide"
+          className="flex gap-2 mb-8 overflow-x-auto pb-4 scrollbar-hide p-4"
         >
           {filters.map(f => (
             <button

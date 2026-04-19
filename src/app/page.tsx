@@ -12,8 +12,8 @@ export default function LandingPage() {
   const [liveBattles, setLiveBattles] = useState<any[]>([]);
 
   useEffect(() => {
-    getBattleWall().then(d => setStats(d.wallData)).catch(() => {});
-    getOpenBattles().then(d => setLiveBattles(d.battles?.slice(0, 3) || [])).catch(() => {});
+    getBattleWall().then(d => setStats(d.wallData)).catch(() => { });
+    getOpenBattles().then(d => setLiveBattles(d.battles?.slice(0, 3) || [])).catch(() => { });
   }, []);
 
   return (
@@ -91,6 +91,107 @@ export default function LandingPage() {
               <p className="text-zinc-500 text-sm">{s.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 pb-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-black mb-3 font-[var(--font-space-grotesk)]">
+            AUTO-PUSH STREAK TRACKER
+          </h2>
+          <p className="text-zinc-500 text-sm max-w-xl mx-auto">
+            Solve on any platform. Auto-push to GitHub. Track every day.
+          </p>
+        </div>
+
+        {/* 4-step flow */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {[
+            { num: '01', title: 'Login', desc: 'GitHub OAuth in one click' },
+            { num: '02', title: 'Solve', desc: 'LeetCode, GFG, CodingNinjas' },
+            { num: '03', title: 'Auto-Push', desc: 'Code syncs instantly' },
+            { num: '04', title: 'Track', desc: 'Streak builds every day' },
+          ].map((s, i) => (
+            <div key={i} className="text-center">
+              <div className="text-4xl font-black text-[#1D9E75]/20 mb-2 font-[var(--font-space-grotesk)]">
+                {s.num}
+              </div>
+              <h3 className="font-bold text-lg mb-1">{s.title}</h3>
+              <p className="text-zinc-500 text-sm">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Features — minimal */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+          {[
+            { icon: '⚡', title: 'Instant push on accept', desc: 'The moment you get Accepted — code is already in your GitHub.' },
+            { icon: '📝', title: 'Auto-generated README', desc: 'Problem stats, difficulty, date — updated on every push automatically.' },
+            { icon: '🔥', title: 'Streak tracking', desc: 'Current streak, longest streak, day counter. Miss a day — it shows.' },
+            { icon: '📊', title: 'Contribution heatmap', desc: '30-day activity grid. Your GitHub goes from empty to proof of consistency.' },
+          ].map((f, i) => (
+            <div
+              key={i}
+              className="border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors"
+            >
+              <span className="text-2xl">{f.icon}</span>
+              <h3 className="font-bold mt-3 mb-1 text-sm">{f.title}</h3>
+              <p className="text-zinc-500 text-xs leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Platforms */}
+        <div className="flex flex-wrap gap-3 justify-center mb-16">
+          {[
+            { name: 'LeetCode', emoji: '📘' },
+            { name: 'GeeksforGeeks', emoji: '🐱' },
+            { name: 'CodingNinjas', emoji: '🥷' },
+          ].map((p, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 border border-zinc-800 rounded-full px-5 py-2 text-sm"
+            >
+              <span>{p.emoji}</span>
+              <span className="text-zinc-400 font-medium">{p.name}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Sample output */}
+        <div className="border border-zinc-800 rounded-xl p-6">
+          <p className="text-xs text-zinc-500 mb-4 uppercase tracking-widest">
+            What gets pushed to GitHub
+          </p>
+          <div className="font-mono text-xs space-y-2 text-zinc-400">
+            <div className="text-[#1D9E75]"># 🔥 DSA Solutions — deenu-cse</div>
+            <div className="text-zinc-600">
+              Auto-tracked · Streak: 🔥 14 days · Total: 47 problems
+            </div>
+            <div className="mt-3 space-y-1.5">
+              <div>
+                <span className="text-[#1D9E75]/60">Day 12</span>
+                {"  "}
+                <span className="text-zinc-300">TwoSum</span>
+                {"  "}
+                <span className="text-zinc-600">LeetCode · Easy</span>
+              </div>
+              <div>
+                <span className="text-[#1D9E75]/60">Day 13</span>
+                {"  "}
+                <span className="text-zinc-300">LongestSubstring</span>
+                {"  "}
+                <span className="text-zinc-600">LeetCode · Medium</span>
+              </div>
+              <div>
+                <span className="text-[#1D9E75]/60">Day 14</span>
+                {"  "}
+                <span className="text-zinc-300">LCA of Three Nodes</span>
+                {"  "}
+                <span className="text-zinc-600">CodingNinjas · Easy</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
