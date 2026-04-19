@@ -1,0 +1,1 @@
+export default function StreakBadge({ streak }: { streak: number }) { return <span className="bg-orange-500/10 text-orange-400 px-2 py-1 flex items-center gap-1 rounded text-xs font-bold">🔥 {streak}</span>; }

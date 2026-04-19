@@ -1,0 +1,1 @@
+export default function FilterBar() { return <div className="flex gap-4 border-b border-zinc-800 pb-2 mb-8 text-sm"><button className="text-[#1D9E75] border-b-2 border-[#1D9E75] pb-2 font-bold">All</button><button className="text-zinc-500 pb-2">Open</button><button className="text-zinc-500 pb-2">Streak</button></div>; }

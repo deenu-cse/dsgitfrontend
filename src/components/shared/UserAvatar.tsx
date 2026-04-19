@@ -1,0 +1,1 @@
+export default function UserAvatar({ user }: any) { return <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold">{user?.username?.[0] || 'U'}</div>; }

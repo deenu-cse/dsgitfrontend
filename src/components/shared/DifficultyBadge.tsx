@@ -1,0 +1,1 @@
+export default function DifficultyBadge({ diff }: { diff: string }) { const color = diff==='Hard'?'text-red-400 bg-red-400/10':diff==='Medium'?'text-amber-400 bg-amber-400/10':'text-green-400 bg-green-400/10'; return <span className={`text-xs px-2 py-1 rounded ${color}`}>{diff}</span>; }

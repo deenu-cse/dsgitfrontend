@@ -1,0 +1,1 @@
+import StreakBadge from '../shared/StreakBadge'; import UserAvatar from '../shared/UserAvatar'; export default function ParticipantCard({ player }: any) { return <div className="flex items-center gap-3 p-3 bg-zinc-900 rounded"><UserAvatar user={player} /><div><div className="font-bold text-white">{player.username}</div><StreakBadge streak={player.currentStreak} /></div></div>; }

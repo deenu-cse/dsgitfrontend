@@ -1,0 +1,1 @@
+import BattleCard from '../battle/BattleCard'; export default function BattleWall({ battles }: any) { return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{battles?.map((b:any, i:number) => <BattleCard key={i} battle={b} />)}</div>; }

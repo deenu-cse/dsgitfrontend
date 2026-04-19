@@ -1,0 +1,1 @@
+export default function Footer() { return <footer className="p-4 text-center text-zinc-500 border-t border-zinc-800 mt-20">Built for exactly what you asked.</footer>; }
