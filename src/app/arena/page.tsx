@@ -176,7 +176,7 @@ export default function ArenaPage() {
               const spotsLeft = (b.maxPlayers || 2) - joined;
               const colors = getTypeColor(b.type);
               const status = getStatusBadge(b);
-              const daysLeft = b.status === 'active' ? Math.ceil((new Date(b.endDate) - new Date()) / 86400000) : null;
+              const daysLeft = b.status === 'active' ? Math.ceil((new Date(b.endDate).getTime() - new Date().getTime()) / 86400000) : null;
 
               return (
                 <motion.div
@@ -214,7 +214,7 @@ export default function ArenaPage() {
                       </span>
                       {b.status === 'active' && (
                         <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">
-                          🔥 {Math.max(0, daysLeft)} days left
+                          🔥 {Math.max(0, daysLeft ?? 0)} days left
                         </span>
                       )}
                     </div>
