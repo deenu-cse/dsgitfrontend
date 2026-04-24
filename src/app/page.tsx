@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getBattleWall, getOpenBattles } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export default function LandingPage() {
   const { user } = useAuth();
@@ -218,11 +219,7 @@ export default function LandingPage() {
           </div>
         </section>
       )}
-
-      {/* Footer */}
-      <footer className="border-t border-zinc-800 py-8 text-center text-zinc-600 text-sm">
-        <p>Built for the DSA community. <a href="https://github.com" className="text-[#1D9E75] hover:underline">GitHub</a> · <a href="https://chrome.google.com/webstore" className="text-[#1D9E75] hover:underline">Install Extension</a></p>
-      </footer>
+      <Footer />
     </div>
   );
 }
